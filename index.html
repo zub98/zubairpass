@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Your e-BusPass</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon">
+                <span>&#9776;</span>
+            </div>
+            <h1>Home</h1>
+            <div class="more-icon">
+                <span>&#x2022;&#x2022;&#x2022;</span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Get Your e-BusPass</h2>
+        <hr class="deep-blue-line">
+        <form id="busPassForm">
+            <label for="busPassNumber">e-BusPass Number <span class="required">*</span></label>
+            <input type="text" id="busPassNumber" value="9573012684057" disabled>
+
+            <label for="mobileNumber">Enter Mobile Number <span class="required">*</span></label>
+            <input type="text" id="mobileNumber" placeholder="Enter Mobile Number">
+
+            <label for="captcha">Captcha</label>
+            <div class="captcha-container">
+                <span class="captcha-text">jtHQvw</span>
+                <img src="captcha-refresh-icon.png" alt="Refresh Captcha">
+            </div>
+
+            <label for="captchaInput">Type the Captcha Here</label>
+            <input type="text" id="captchaInput" placeholder="Type Captcha">
+
+            <!-- Add an onClick event to trigger redirect -->
+            <button type="button" onclick="submitForm()">SUBMIT</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>Copyright &copy; - Delhi e-Governance Society 2024</p>
+    </footer>
+
+    <script>
+        function submitForm() {
+            // Perform form validation if needed (optional)
+            const mobileNumber = document.getElementById('mobileNumber').value;
+            const captchaInput = document.getElementById('captchaInput').value;
+
+            // Example simple validation: Check if fields are filled
+            if (mobileNumber && captchaInput) {
+                // Redirect to the target URL if form is valid
+                window.location.href = "https://sites.google.com/view/httpsdtcpass-delhi-gov-in/home";
+            } else {
+                alert("Please fill in all the required fields.");
+            }
+        }
+    </script>
+</body>
+</html>
